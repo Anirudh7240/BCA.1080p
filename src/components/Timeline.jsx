@@ -4,19 +4,19 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const journeys = [
   {
-    year: "2023",
+    year: "2024",
     title: "1st Year Onam",
     desc: "Celebrating our first Onam together with vibrant colors, floral carpets, and an unforgettable feast.",
     image: "/1ST YEAR ONAM.jpg"
   },
   {
-    year: "2023",
+    year: "2024",
     title: "1st Christmas",
     desc: "Secret Santas, carols, and our very first holiday celebration as a college family.",
     image: "/1ST XMAS.jpg"
   },
   {
-    year: "2023",
+    year: "2024",
     title: "1st Year Ethnic Day",
     image: "/1ST ETHNIC.jpg"
   },
@@ -27,18 +27,23 @@ const journeys = [
     image: "/1ST YEAR IFTAR.jpg"
   },
   {
-    year: "2024",
+    year: "2025",
     title: "2nd Year Onam",
     image: "/2ND ONAM.jpg"
   },
   {
-    year: "2024",
+    year: "2025",
+    title: "2nd Christmas",
+    image: "/2ND XMAS.jpg"
+  },
+  {
+    year: "2025",
     title: "2nd Year Ethnic Day",
     desc: "Our second time around. The outfits got better, the smiles got wider.",
     image: "/2ND ETHNIC.jpg"
   },
   {
-    year: "2025",
+    year: "2026",
     title: "3rd Year Ethnic Day",
     desc: "One last time rocking traditional wear together before we graduate.",
     image: "/3RD ETHNIC.jpg"
