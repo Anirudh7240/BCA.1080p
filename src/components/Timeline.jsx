@@ -39,6 +39,11 @@ const journeys = [
     image: "/2ND ETHNIC.jpg"
   },
   {
+    year: "2025",
+    title: "3rd Year Onam",
+    image: "/3RD ONAM.jpg"
+  },
+  {
     year: "2026",
     title: "3rd Year Ethnic Day",
     image: "/3RD ETHNIC.jpg"
