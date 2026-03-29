@@ -51,9 +51,12 @@ const Messages = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <button className="px-8 py-3 bg-white text-black font-bold tracking-widest uppercase rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]">
+          <a 
+            href="mailto:bca.1080p@gmail.com?subject=Message%20for%20the%20Class%20Website"
+            className="inline-block px-8 py-3 bg-white text-black font-bold tracking-widest uppercase rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+          >
             Write a Message
-          </button>
+          </a>>
         </motion.div>
       </div>
     </section>
