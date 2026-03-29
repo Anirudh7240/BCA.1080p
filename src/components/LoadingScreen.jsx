@@ -27,7 +27,7 @@ const LoadingScreen = ({ onComplete }) => {
         transition={{ duration: 1.2, ease: "easeInOut" }}
       >
         <motion.h1 
-          className="text-4xl md:text-6xl font-cinematic text-white text-glow mb-8 tracking-widest"
+          className="text-2xl sm:text-4xl md:text-6xl font-cinematic text-white text-glow mb-8 tracking-widest text-center px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
