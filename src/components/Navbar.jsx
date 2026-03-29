@@ -30,7 +30,7 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
         scrolled ? 'glass py-3' : 'bg-transparent py-6'
       }`}
     >
-      <div className="text-xl md:text-2xl font-cinematic font-bold text-white tracking-widest text-glow z-10 w-1/3">
+      <div className="text-xl md:text-2xl font-cinematic font-bold text-white tracking-widest text-glow z-10 w-auto md:w-1/3 whitespace-nowrap">
         BCA.1080P
       </div>
 

@@ -130,14 +130,14 @@ const Timeline = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={prevSlide} 
-            className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/50 hover:bg-white hover:text-black rounded-full transition-all text-white z-20 backdrop-blur-md shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.6)]"
+            className="absolute left-2 md:-left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/50 hover:bg-white hover:text-black rounded-full transition-all text-white z-20 backdrop-blur-md shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.6)]"
           >
             <ChevronLeft size={32} />
           </button>
           
           <button 
             onClick={nextSlide} 
-            className="absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/50 hover:bg-white hover:text-black rounded-full transition-all text-white z-20 backdrop-blur-md shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.6)]"
+            className="absolute right-2 md:-right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/50 hover:bg-white hover:text-black rounded-full transition-all text-white z-20 backdrop-blur-md shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.6)]"
           >
             <ChevronRight size={32} />
           </button>

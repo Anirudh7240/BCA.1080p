@@ -48,7 +48,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 1.2, ease: "easeOut" }}
-          className="text-5xl md:text-8xl font-cinematic font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500 mb-8 tracking-widest leading-tight text-glow"
+          className="text-4xl sm:text-5xl md:text-8xl font-cinematic font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500 mb-8 tracking-widest leading-tight text-glow"
         >
           BCA.1080P
         </motion.h1>
