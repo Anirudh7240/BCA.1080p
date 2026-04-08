@@ -121,6 +121,17 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
               {link.name}
             </a>
           ))}
+          
+          <a 
+            href="https://www.instagram.com/bca.1080p?igsh=MW1ubnhnc3U2bWNlbg==" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center text-white/80 hover:text-white transition-colors mt-2 pt-4 border-t border-white/10 w-2/3 justify-center text-sm tracking-widest"
+          >
+            <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
+            <span>@bca.1080p</span>
+          </a>
         </motion.div>
       )}
     </motion.nav>
