@@ -34,8 +34,8 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
         BCA.1080P
       </div>
 
-      {/* Centered Instagram Link (Desktop) */}
-      <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 justify-center items-center z-10 w-1/3">
+      {/* Centered Instagram Links (Desktop) */}
+      <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 justify-center items-center z-10 w-auto gap-6 bg-transparent">
         <a 
           href="https://www.instagram.com/bca.1080p?igsh=MW1ubnhnc3U2bWNlbg==" 
           target="_blank" 
@@ -44,6 +44,15 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
         >
           <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
           <span>@bca.1080p</span>
+        </a>
+        <a 
+          href="https://www.instagram.com/kann.bca?igsh=NHBzYmkxMWpzcG9j" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center text-white/80 hover:text-white hover:scale-105 transition-all text-sm tracking-widest"
+        >
+          <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
+          <span>@kann.bca</span>
         </a>
       </div>
 
@@ -122,16 +131,28 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
             </a>
           ))}
           
-          <a 
-            href="https://www.instagram.com/bca.1080p?igsh=MW1ubnhnc3U2bWNlbg==" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center text-white/80 hover:text-white transition-colors mt-2 pt-4 border-t border-white/10 w-2/3 justify-center text-sm tracking-widest"
-          >
-            <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
-            <span>@bca.1080p</span>
-          </a>
+          <div className="flex flex-col items-center gap-3 mt-2 pt-4 border-t border-white/10 w-2/3">
+            <a 
+              href="https://www.instagram.com/bca.1080p?igsh=MW1ubnhnc3U2bWNlbg==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center text-white/80 hover:text-white transition-colors justify-center text-sm tracking-widest"
+            >
+              <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
+              <span>@bca.1080p</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/kann.bca?igsh=NHBzYmkxMWpzcG9j" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center text-white/80 hover:text-white transition-colors justify-center text-sm tracking-widest"
+            >
+              <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
+              <span>@kann.bca</span>
+            </a>
+          </div>
         </motion.div>
       )}
     </motion.nav>

@@ -48,9 +48,12 @@ const Footer = () => {
             <div className="text-left font-sans">Campus Library & Canteen</div>
 
             <div className="text-right uppercase tracking-widest font-bold">Instagram</div>
-            <div className="text-left font-sans">
-              <a href="https://instagram.com/bca.1080p" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline decoration-white/30 underline-offset-4">
+            <div className="text-left font-sans flex flex-col gap-1">
+              <a href="https://instagram.com/bca.1080p" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline decoration-white/30 underline-offset-4 w-fit">
                 @bca.1080p
+              </a>
+              <a href="https://www.instagram.com/kann.bca?igsh=NHBzYmkxMWpzcG9j" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline decoration-white/30 underline-offset-4 w-fit">
+                @kann.bca
               </a>
             </div>
             
@@ -65,7 +68,7 @@ const Footer = () => {
           transition={{ duration: 2, delay: 1 }}
           className="mt-24 text-white/40 text-xs tracking-widest"
         >
-          &copy; {new Date().getFullYear()} BCA.1080P. Follow us <a href="https://instagram.com/bca.1080p" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">@bca.1080p</a>. Made with ❤️ and nostalgic tears.
+          &copy; {new Date().getFullYear()} BCA.1080P. Follow us <a href="https://instagram.com/bca.1080p" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">@bca.1080p</a> & <a href="https://www.instagram.com/kann.bca?igsh=NHBzYmkxMWpzcG9j" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">@kann.bca</a>. Made with ❤️ and nostalgic tears.
         </motion.div>
       </div>
     </motion.footer>
