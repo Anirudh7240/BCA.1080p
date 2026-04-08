@@ -3,12 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 
 const images = [
-  { id: 1, src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2070&auto=format&fit=crop", title: "Campus Vibing", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
-  { id: 2, src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop", title: "Late Night Coding", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 3, src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop", title: "The Fest", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 4, src: "https://images.unsplash.com/photo-1525926578051-7b0037eb965a?q=80&w=2070&auto=format&fit=crop", title: "Graduation Setup", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-1" },
-  { id: 5, src: "https://images.unsplash.com/photo-1502444330042-d1a1ddf9ee5b?q=80&w=2073&auto=format&fit=crop", title: "Library Hangs", colSpan: "col-span-1 md:col-span-1", rowSpan: "row-span-2" },
-  { id: 6, src: "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070&auto=format&fit=crop", title: "Canteen Memories", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 1, src: "/memories/IMG_0527.jpg", title: "Campus Vibes", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
+  { id: 2, src: "/memories/IMG_2520.jpg", title: "Late Night Fun", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 3, src: "/memories/IMG_3992.jpg", title: "The Fest", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 4, src: "/memories/IMG_4160.jpg", title: "Group Huddle", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-1" },
+  { id: 6, src: "/memories/IMG_5011.jpg", title: "Canteen Memories", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 7, src: "/memories/IMG_5089.jpg", title: "Classroom Chronicles", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 8, src: "/memories/IMG_5411.jpg", title: "Farewell Moments", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
+  { id: 9, src: "/memories/IMG_5790.jpg", title: "Cherished Times", colSpan: "col-span-1", rowSpan: "row-span-1" },
 ];
 
 const Gallery = () => {
@@ -27,7 +29,7 @@ const Gallery = () => {
           <div className="w-24 h-1 bg-white/20 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-none md:grid-rows-4 gap-4 auto-rows-[250px]">
+        <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
           {images.map((img) => (
             <motion.div
               key={img.id}
@@ -37,18 +39,34 @@ const Gallery = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 0.98 }}
-              className={`relative group cursor-pointer overflow-hidden rounded-xl ${img.colSpan} ${img.rowSpan} glass`}
+              className={`relative group cursor-pointer overflow-hidden rounded-xl glass break-inside-avoid mb-4`}
             >
-              <img src={img.src} alt={img.title} className="w-full h-full object-cover transition-all duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
-                <div className="flex justify-between items-center w-full">
-                  <span className="text-white font-sans tracking-wider">{img.title}</span>
-                  <ZoomIn className="text-white" size={20} />
+              <img src={img.src} alt="Memory" className="w-full h-auto object-cover transition-all duration-700 block" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div className="flex justify-end items-center w-full">
+                  <ZoomIn className="text-white" size={24} />
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <a 
+            href="https://drive.google.com/drive/folders/1A7UC5FbepdaFARkMke1LXok4Akcf2kmd?usp=drive_link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white font-sans tracking-widest uppercase text-sm transition-all duration-300 hover:scale-105 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+          >
+            <img src="/vecteezy_google-drive-icons_17395378.png" alt="Google Drive" className="w-6 h-6 object-contain" />
+            View More on Google Drive
+          </a>
+        </motion.div>
       </div>
 
       <AnimatePresence>
@@ -71,10 +89,7 @@ const Gallery = () => {
               >
                 <X size={24} />
               </button>
-              <img src={selectedId.src} alt={selectedId.title} className="w-full h-auto max-h-[85vh] object-contain block" />
-              <div className="p-6 bg-black text-center">
-                <h3 className="text-2xl font-cinematic font-bold text-white tracking-widest">{selectedId.title}</h3>
-              </div>
+              <img src={selectedId.src} alt="Memory" className="w-full h-auto max-h-[90vh] object-contain block" />
             </motion.div>
           </motion.div>
         )}

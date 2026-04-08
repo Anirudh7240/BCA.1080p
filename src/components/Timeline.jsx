@@ -15,7 +15,7 @@ const journeys = [
   },
   {
     year: "2024",
-    title: "1st Year Ethnic Day",
+    title: "1st Year Ethnic",
     image: "/1ST ETHNIC.jpg"
   },
   {
@@ -40,6 +40,11 @@ const journeys = [
   },
   {
     year: "2025",
+    title: "2nd Year Iftar",
+    image: "/2ND iFTAR.jpg"
+  },
+  {
+    year: "2025",
     title: "3rd Year Onam",
     image: "/3RD ONAM.jpg"
   },
@@ -50,7 +55,7 @@ const journeys = [
   },
   {
     year: "2026",
-    title: "3rd Year Ethnic Day",
+    title: "3rd Year Ethnic",
     image: "/3RD ETHNIC.jpg"
   },
   {
