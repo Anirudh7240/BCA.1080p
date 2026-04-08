@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <section 
       ref={ref}
-      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+      className="relative h-[100dvh] w-full flex items-center justify-center overflow-hidden"
     >
       {/* Background with parallax */}
       <motion.div 

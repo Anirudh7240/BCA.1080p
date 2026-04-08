@@ -26,11 +26,11 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut', delay: 0.5 }}
-      className={`fixed top-0 w-full z-40 transition-all duration-300 px-6 py-4 flex items-center justify-between ${
-        scrolled ? 'glass py-3' : 'bg-transparent py-6'
+      className={`fixed top-0 w-full z-40 transition-all duration-300 px-4 md:px-6 py-4 flex items-center justify-between ${
+        scrolled ? 'glass py-3' : 'bg-transparent py-4 md:py-6'
       }`}
     >
-      <div className="text-xl md:text-2xl font-cinematic font-bold text-white tracking-widest text-glow z-10 w-auto md:w-1/3 whitespace-nowrap">
+      <div className="text-lg sm:text-xl md:text-2xl font-cinematic font-bold text-white tracking-widest text-glow z-10 w-auto md:w-1/3 whitespace-nowrap">
         BCA.1080P
       </div>
 
@@ -83,13 +83,13 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
       </div>
 
       {/* Mobile Nav Toggle */}
-      <div className="md:hidden flex items-center gap-4">
-        <div className="flex items-center space-x-2 bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
+      <div className="md:hidden flex items-center gap-2 sm:gap-4">
+        <div className="flex items-center space-x-1 sm:space-x-2 bg-white/5 px-2 py-1.5 sm:px-3 sm:py-1.5 rounded-full border border-white/10">
           <button onClick={prevSong} className="text-white/70">
             <SkipBack size={14} />
           </button>
           <button onClick={toggleMusic} className="text-white">
-            {isMusicPlaying ? <Music size={16} /> : <Music4 size={16} className="opacity-50" />}
+            {isMusicPlaying ? <Music size={14} className="sm:w-4 sm:h-4" /> : <Music4 size={14} className="opacity-50 sm:w-4 sm:h-4" />}
           </button>
           <button onClick={nextSong} className="text-white/70">
             <SkipForward size={14} />

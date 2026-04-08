@@ -40,7 +40,7 @@ const Footer = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="space-y-4 text-white/70"
         >
-          <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-sm md:text-base">
+          <div className="grid grid-cols-2 gap-x-4 md:gap-x-12 gap-y-4 text-sm md:text-base">
             <div className="text-right uppercase tracking-widest font-bold">Starring</div>
             <div className="text-left font-sans">BCA.1080P</div>
             

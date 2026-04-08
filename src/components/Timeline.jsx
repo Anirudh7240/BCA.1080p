@@ -69,7 +69,7 @@ const TimelineItem = ({ item, index, onSelect }) => {
   const isEven = index % 2 === 0;
   
   return (
-    <div className={`mb-16 md:mb-32 flex justify-start md:justify-between items-center w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
+    <div className={`relative mb-16 md:mb-32 flex justify-start md:justify-between items-center w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
       {/* Spacer for the other side on desktop */}
       <div className="hidden md:block md:w-[45%]"></div>
       
@@ -78,7 +78,7 @@ const TimelineItem = ({ item, index, onSelect }) => {
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="z-20 flex items-center absolute left-[30px] md:left-1/2 transform -translate-x-1/2 bg-black shadow-[0_0_15px_rgba(255,255,255,0.4)] w-5 h-5 md:w-8 md:h-8 rounded-full border-[3px] md:border-4 border-white"
+        className="z-20 flex items-center absolute left-[30px] md:left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black shadow-[0_0_15px_rgba(255,255,255,0.4)] w-5 h-5 md:w-8 md:h-8 rounded-full border-[3px] md:border-4 border-white"
       >
         <div className="w-[8px] h-[8px] md:w-[12px] md:h-[12px] bg-white rounded-full animate-pulse m-auto"></div>
       </motion.div>
