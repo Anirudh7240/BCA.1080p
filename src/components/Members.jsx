@@ -92,7 +92,7 @@ const Members = () => {
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover object-top rounded-full grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <ZoomIn className="text-white" size={20} />
@@ -130,7 +130,7 @@ const Members = () => {
                 <img 
                   src={selectedMember.image} 
                   alt={selectedMember.name} 
-                  className="w-full h-full object-cover rounded-full"
+                  className="w-full h-full object-cover object-top rounded-full"
                 />
               </div>
               <h3 className="text-3xl font-bold text-white tracking-wide mb-2">{selectedMember.name}</h3>
