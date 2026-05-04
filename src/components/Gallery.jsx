@@ -3,14 +3,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 
 const images = [
-  { id: 1, src: "/memories/IMG_0527.jpg", title: "Campus Vibes", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
-  { id: 2, src: "/memories/IMG_2520.jpg", title: "Late Night Fun", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 3, src: "/memories/IMG_3992.jpg", title: "The Fest", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 4, src: "/memories/IMG_4160.jpg", title: "Group Huddle", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-1" },
-  { id: 6, src: "/memories/IMG_5011.jpg", title: "Canteen Memories", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 7, src: "/memories/IMG_5089.jpg", title: "Classroom Chronicles", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 8, src: "/memories/IMG_5411.jpg", title: "Farewell Moments", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
-  { id: 9, src: "/memories/IMG_5790.jpg", title: "Cherished Times", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 10, src: "/1ST ETHNIC.jpg", title: "1st Year Ethnic Day" },
+  { id: 11, src: "/1ST XMAS.jpg", title: "1st Year Xmas" },
+  { id: 12, src: "/1ST YEAR IFTAR.jpg", title: "1st Year Iftar" },
+  { id: 13, src: "/1ST YEAR ONAM.jpg", title: "1st Year Onam" },
+  { id: 14, src: "/2ND ETHNIC.jpg", title: "2nd Year Ethnic Day" },
+  { id: 15, src: "/2ND ONAM.jpg", title: "2nd Year Onam" },
+  { id: 16, src: "/2ND XMAS.jpg", title: "2nd Year Xmas" },
+  { id: 17, src: "/2ND iFTAR.jpg", title: "2nd Year Iftar" },
+  { id: 18, src: "/3RD ETHNIC.jpg", title: "3rd Year Ethnic Day" },
+  { id: 19, src: "/3RD ONAM.jpg", title: "3rd Year Onam" },
+  { id: 20, src: "/3RD XMAS.jpeg", title: "3rd Year Xmas" },
+  { id: 21, src: "/3RD YEAR IFTAR.jpg", title: "3rd Year Iftar" },
 ];
 
 const Gallery = () => {
@@ -41,7 +45,7 @@ const Gallery = () => {
               whileHover={{ scale: 0.98 }}
               className={`relative group cursor-pointer overflow-hidden rounded-xl glass break-inside-avoid mb-4`}
             >
-              <img src={img.src} alt="Memory" className="w-full h-auto object-cover transition-all duration-700 block" />
+              <img src={img.src} alt={img.title || "Memory"} className="w-full aspect-square object-cover transition-all duration-700 block" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <div className="flex justify-end items-center w-full">
                   <ZoomIn className="text-white" size={24} />
