@@ -64,9 +64,14 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 2, delay: 1 }}
-          className="mt-24 text-white/40 text-xs tracking-widest"
+          className="mt-24 flex flex-col items-center gap-8"
         >
-          &copy; {new Date().getFullYear()} BCA.1080P. Follow us <a href="https://instagram.com/bca.1080p" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">@bca.1080p</a> & <a href="https://www.instagram.com/kann.bca?igsh=NHBzYmkxMWpzcG9j" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">@kann.bca</a>.
+          <div className="text-white/40 text-xs tracking-widest">
+            &copy; {new Date().getFullYear()} BCA.1080P. Follow us <a href="https://instagram.com/bca.1080p" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">@bca.1080p</a> & <a href="https://www.instagram.com/kann.bca?igsh=NHBzYmkxMWpzcG9j" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">@kann.bca</a>.
+          </div>
+          <div className="text-white/10 text-[10px] tracking-[0.3em] font-sans hover:text-white/30 transition-colors">
+            &copy; {new Date().getFullYear()} ANIRUDH
+          </div>
         </motion.div>
       </div>
     </motion.footer>
