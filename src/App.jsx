@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import Gallery from './components/Gallery';
 import Members from './components/Members';
-import Messages from './components/Messages';
 import Footer from './components/Footer';
 
 const playlist = [
@@ -64,7 +63,6 @@ function App() {
             <Timeline />
             <Gallery />
             <Members />
-            <Messages />
           </main>
           <Footer />
           <audio ref={audioRef} onEnded={nextSong} preload="auto" src={playlist[currentSongIndex].src}>

@@ -17,8 +17,7 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
   const navLinks = [
     { name: 'Journey', href: '#timeline' },
     { name: 'Memories', href: '#gallery' },
-    { name: 'Batch', href: '#members' },
-    { name: 'Messages', href: '#messages' }
+    { name: 'Batch', href: '#members' }
   ];
 
   return (
