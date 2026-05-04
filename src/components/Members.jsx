@@ -88,11 +88,11 @@ const Members = () => {
               onClick={() => setSelectedMember(member)}
               className="glass rounded-xl p-6 text-center group hover:border-white/30 transition-all duration-300 cursor-pointer"
             >
-              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full p-1 border border-white/20 group-hover:border-white/50 transition-colors">
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full p-1 border border-white/20 group-hover:border-white/50 transition-colors bg-white overflow-hidden">
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover object-top rounded-full grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-contain rounded-full grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <ZoomIn className="text-white" size={20} />
@@ -126,11 +126,11 @@ const Members = () => {
                 <X size={20} />
               </button>
               
-              <div className="w-48 h-48 mx-auto mb-6 rounded-full p-2 border-2 border-white/30">
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full p-2 border-2 border-white/30 bg-white overflow-hidden">
                 <img 
                   src={selectedMember.image} 
                   alt={selectedMember.name} 
-                  className="w-full h-full object-cover object-top rounded-full"
+                  className="w-full h-full object-contain rounded-full"
                 />
               </div>
               <h3 className="text-3xl font-bold text-white tracking-wide mb-2">{selectedMember.name}</h3>
