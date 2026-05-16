@@ -73,7 +73,7 @@ const Members = () => {
         >
           <h2 className="text-3xl md:text-5xl font-cinematic font-bold text-white tracking-widest text-glow mb-4">THE BATCH</h2>
           <div className="w-24 h-1 bg-white/20 mx-auto rounded-full mb-6"></div>
-          <p className="text-white/50 max-w-2xl mx-auto">The people who made these three years unforgettable. From all-nighters to incredible successes.</p>
+          <p className="text-white/50 max-w-2xl mx-auto">The people who made these three years unforgettable.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
