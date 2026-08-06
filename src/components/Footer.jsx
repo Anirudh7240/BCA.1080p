@@ -45,7 +45,7 @@ const Footer = () => {
             <div className="text-left font-sans">BCA.1080P</div>
             
             <div className="text-right uppercase tracking-widest font-bold">Location</div>
-            <div className="text-left font-sans uppercase">MES KVM COLLEGE AND SORROUNDINGS</div>
+            <div className="text-left font-sans uppercase">MES KVM COLLEGE AND SURROUNDINGS</div>
 
             <div className="text-right uppercase tracking-widest font-bold">Instagram</div>
             <div className="text-left font-sans flex flex-col gap-1">
