@@ -29,15 +29,15 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
         scrolled ? 'glass py-3' : 'bg-transparent py-4 md:py-6'
       }`}
     >
-      <div className="text-lg sm:text-xl md:text-2xl font-cinematic font-bold text-white tracking-widest text-glow z-10 w-auto md:w-1/3 whitespace-nowrap">
+      <div className="text-lg sm:text-xl md:text-2xl font-cinematic font-bold text-white tracking-widest text-glow z-10 flex-shrink-0">
         BCA.1080P
       </div>
 
       {/* Desktop Menu Wrapper */}
-      <div className="hidden xl:flex flex-1 items-center justify-between ml-8 z-10">
+      <div className="hidden lg:flex flex-1 items-center justify-between ml-8 z-10">
         
         {/* Center: Instagram Links */}
-        <div className="flex flex-1 justify-center items-center gap-6">
+        <div className="flex justify-center items-center gap-4 lg:gap-6 mx-auto">
           <a 
             href="https://www.instagram.com/bca.1080p?igsh=MW1ubnhnc3U2bWNlbg==" 
             target="_blank" 
@@ -59,7 +59,7 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
         </div>
 
         {/* Right: Nav Links + Music */}
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-6 lg:space-x-8 flex-shrink-0">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -97,7 +97,7 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
       </div>
 
       {/* Mobile Nav Toggle */}
-      <div className="md:hidden flex items-center gap-2 sm:gap-4">
+      <div className="lg:hidden flex items-center gap-2 sm:gap-4">
         <div className="flex flex-col items-end gap-1">
           <div className="flex items-center space-x-1 sm:space-x-2 bg-white/5 px-2 py-1.5 sm:px-3 sm:py-1.5 rounded-full border border-white/10">
             <button onClick={prevSong} className="text-white/70">
@@ -131,7 +131,7 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="absolute top-full left-0 w-full glass flex flex-col items-center py-6 space-y-4 md:hidden"
+          className="absolute top-full left-0 w-full glass flex flex-col items-center py-6 space-y-4 lg:hidden"
         >
           {/* Mobile Experience Reminder */}
           <div className="text-[10px] text-white/60 tracking-widest uppercase text-center border-b border-white/5 pb-3 w-4/5 animate-pulse flex items-center justify-center gap-1.5">
