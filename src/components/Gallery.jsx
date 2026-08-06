@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
+import ImageLoader from './ImageLoader';
 
 const images = [
-  { id: 1, src: "/memories/IMG_0527.jpg", title: "Campus Vibes", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
-  { id: 2, src: "/memories/IMG_2520.jpg", title: "Late Night Fun", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 3, src: "/memories/IMG_3992.jpg", title: "The Fest", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 4, src: "/memories/IMG_4160.jpg", title: "Group Huddle", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-1" },
-  { id: 6, src: "/memories/IMG_5011.jpg", title: "Canteen Memories", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 7, src: "/memories/IMG_5089.jpg", title: "Classroom Chronicles", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { id: 8, src: "/memories/IMG_5411.jpg", title: "Farewell Moments", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
-  { id: 9, src: "/memories/IMG_5790.jpg", title: "Cherished Times", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 1, src: "/memories/IMG_0527.webp", title: "Campus Vibes", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
+  { id: 2, src: "/memories/IMG_2520.webp", title: "Late Night Fun", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 3, src: "/memories/IMG_3992.webp", title: "The Fest", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 4, src: "/memories/IMG_4160.webp", title: "Group Huddle", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-1" },
+  { id: 6, src: "/memories/IMG_5011.webp", title: "Canteen Memories", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 7, src: "/memories/IMG_5089.webp", title: "Classroom Chronicles", colSpan: "col-span-1", rowSpan: "row-span-1" },
+  { id: 8, src: "/memories/IMG_5411.webp", title: "Farewell Moments", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
+  { id: 9, src: "/memories/IMG_5790.webp", title: "Cherished Times", colSpan: "col-span-1", rowSpan: "row-span-1" },
 ];
 
 const Gallery = () => {
@@ -41,7 +42,7 @@ const Gallery = () => {
               whileHover={{ scale: 0.98 }}
               className={`relative group cursor-pointer overflow-hidden rounded-xl glass break-inside-avoid mb-4`}
             >
-              <img src={img.src} alt="Memory" className="w-full h-auto object-cover transition-all duration-700 block" />
+              <ImageLoader src={img.src} alt="Memory" className="w-full h-auto object-cover transition-all duration-700 block group-hover:scale-102" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <div className="flex justify-end items-center w-full">
                   <ZoomIn className="text-white" size={24} />
@@ -89,7 +90,7 @@ const Gallery = () => {
               >
                 <X size={24} />
               </button>
-              <img src={selectedId.src} alt="Memory" className="w-full h-auto max-h-[90vh] object-contain block" />
+              <ImageLoader src={selectedId.src} alt="Memory" className="w-full h-auto max-h-[90vh] object-contain block" />
             </motion.div>
           </motion.div>
         )}

@@ -70,6 +70,11 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
             </a>
           ))}
           
+          {/* Experience Reminder */}
+          <span className="hidden lg:inline-flex items-center gap-1.5 text-[11px] text-white/50 tracking-wider uppercase font-medium bg-white/5 px-3 py-1.5 rounded-full border border-white/5 animate-pulse">
+            🎧 Play music to experience
+          </span>
+
           {/* Playlist Controls */}
           <div className="flex items-center space-x-3 bg-white/5 px-4 py-2 rounded-full border border-white/10 whitespace-nowrap">
             <button onClick={prevSong} className="text-white/70 hover:text-white transition-colors">
@@ -81,7 +86,10 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
             <button onClick={nextSong} className="text-white/70 hover:text-white transition-colors">
               <SkipForward size={16} />
             </button>
-            <span className="text-xs text-white/50 tracking-widest uppercase ml-2 w-16 truncate flex-shrink-0">
+            <span 
+              className="text-xs text-white/70 tracking-widest uppercase ml-2 max-w-[180px] truncate flex-shrink-0"
+              title={currentSong.title}
+            >
               {currentSong.title}
             </span>
           </div>
@@ -90,16 +98,24 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
 
       {/* Mobile Nav Toggle */}
       <div className="md:hidden flex items-center gap-2 sm:gap-4">
-        <div className="flex items-center space-x-1 sm:space-x-2 bg-white/5 px-2 py-1.5 sm:px-3 sm:py-1.5 rounded-full border border-white/10">
-          <button onClick={prevSong} className="text-white/70">
-            <SkipBack size={14} />
-          </button>
-          <button onClick={toggleMusic} className="text-white">
-            {isMusicPlaying ? <Music size={14} className="sm:w-4 sm:h-4" /> : <Music4 size={14} className="opacity-50 sm:w-4 sm:h-4" />}
-          </button>
-          <button onClick={nextSong} className="text-white/70">
-            <SkipForward size={14} />
-          </button>
+        <div className="flex flex-col items-end gap-1">
+          <div className="flex items-center space-x-1 sm:space-x-2 bg-white/5 px-2 py-1.5 sm:px-3 sm:py-1.5 rounded-full border border-white/10">
+            <button onClick={prevSong} className="text-white/70">
+              <SkipBack size={14} />
+            </button>
+            <button onClick={toggleMusic} className="text-white">
+              {isMusicPlaying ? <Music size={14} className="sm:w-4 sm:h-4" /> : <Music4 size={14} className="opacity-50 sm:w-4 sm:h-4" />}
+            </button>
+            <button onClick={nextSong} className="text-white/70">
+              <SkipForward size={14} />
+            </button>
+          </div>
+          <span 
+            className="text-[9px] text-white/55 tracking-wider uppercase max-w-[100px] truncate text-right block"
+            title={currentSong.title}
+          >
+            {currentSong.title}
+          </span>
         </div>
         <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -117,6 +133,10 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
           exit={{ opacity: 0, y: -20 }}
           className="absolute top-full left-0 w-full glass flex flex-col items-center py-6 space-y-4 md:hidden"
         >
+          {/* Mobile Experience Reminder */}
+          <div className="text-[10px] text-white/60 tracking-widest uppercase text-center border-b border-white/5 pb-3 w-4/5 animate-pulse flex items-center justify-center gap-1.5">
+            🎧 Play music for the best experience
+          </div>
           {navLinks.map((link) => (
             <a
               key={link.name}

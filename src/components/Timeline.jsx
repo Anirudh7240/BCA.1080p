@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
+import ImageLoader from './ImageLoader';
 
 const journeys = [
   {
@@ -100,11 +101,11 @@ const TimelineItem = ({ item, index, onSelect }) => {
           className="relative w-full aspect-[4/3] md:aspect-video rounded-xl overflow-hidden mt-2 group shadow-[0_5px_15px_rgba(0,0,0,0.5)] cursor-pointer"
           onClick={() => onSelect(item)}
         >
-          <img 
-            src={item.image} 
+          <ImageLoader 
+            src={item.image.replace(/\.(jpg|jpeg|png)(\?.*)?$/i, '.webp')} 
             alt={item.title}
             className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${item.position ? 'object-' + item.position : 'object-center'}`}
-            loading="lazy"
+            wrapperClassName="w-full h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-6 backdrop-blur-[1px]">
              <div className="flex items-center gap-3 bg-black/40 px-6 py-2 rounded-full border border-white/20 backdrop-blur-md">
@@ -189,10 +190,11 @@ const Timeline = () => {
               </button>
               
               <div className="relative rounded-2xl overflow-hidden shadow-2xl glass border border-white/10 max-h-[85vh] w-full flex justify-center bg-black/50">
-                <img 
-                  src={selectedImage.image} 
+                <ImageLoader 
+                  src={selectedImage.image.replace(/\.(jpg|jpeg|png)(\?.*)?$/i, '.webp')} 
                   alt={selectedImage.title} 
                   className="w-full h-full object-contain max-h-[85vh] block" 
+                  wrapperClassName="w-full h-full flex justify-center"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/95 via-black/80 to-transparent text-center">
                   <span className="text-sm md:text-md font-sans text-white/60 mb-1 block uppercase tracking-widest">{selectedImage.year}</span>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
+import ImageLoader from './ImageLoader';
 
 const members = [
   { id: 2, name: "Adil V.P", role: "Roll No. 2", image: "/Adil.jpg" },
@@ -89,10 +90,11 @@ const Members = () => {
               className="glass rounded-xl p-6 text-center group hover:border-white/30 transition-all duration-300 cursor-pointer"
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full p-1 border border-white/20 group-hover:border-white/50 transition-colors bg-white overflow-hidden">
-                <img 
-                  src={member.image} 
+                <ImageLoader 
+                  src={member.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')} 
                   alt={member.name} 
-                  className="w-full h-full object-contain rounded-full grayscale group-hover:grayscale-0 transition-all duration-500"
+                  imgClassName="w-full h-full object-contain rounded-full grayscale group-hover:grayscale-0 transition-all duration-500"
+                  wrapperClassName="w-full h-full rounded-full"
                 />
                 <div className="absolute inset-0 bg-black/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <ZoomIn className="text-white" size={20} />
@@ -127,10 +129,11 @@ const Members = () => {
               </button>
               
               <div className="w-48 h-48 mx-auto mb-6 rounded-full p-2 border-2 border-white/30 bg-white overflow-hidden">
-                <img 
-                  src={selectedMember.image} 
+                <ImageLoader 
+                  src={selectedMember.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')} 
                   alt={selectedMember.name} 
-                  className="w-full h-full object-contain rounded-full"
+                  imgClassName="w-full h-full object-contain rounded-full"
+                  wrapperClassName="w-full h-full rounded-full"
                 />
               </div>
               <h3 className="text-3xl font-bold text-white tracking-wide mb-2">{selectedMember.name}</h3>

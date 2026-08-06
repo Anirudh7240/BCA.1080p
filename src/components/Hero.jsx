@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import ImageLoader from './ImageLoader';
 
 const Hero = () => {
   const ref = useRef(null);
@@ -26,10 +27,11 @@ const Hero = () => {
         {/* Placeholder for actual background image/video. Using a gradient for cinematic feel. */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-purple-900/20 to-black z-0"></div>
         {/* Landing Page Photo: Change the src below to your photo's URL or put your photo in the public folder and use '/your-photo.jpg' */}
-        <img 
-          src="/LANDING-PAGE.jpg" 
+        <ImageLoader 
+          src="/LANDING-PAGE.webp" 
           alt="Batch Memory" 
           className="w-full h-full object-cover opacity-80"
+          wrapperClassName="w-full h-full"
         />
       </motion.div>
 
