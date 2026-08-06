@@ -40,7 +40,7 @@ const Hero = () => {
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="text-white/70 font-sans tracking-[0.3em] uppercase mb-6 text-sm md:text-base"
         >
           From Strangers to Family
@@ -49,7 +49,7 @@ const Hero = () => {
         <motion.h1 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, delay: 1.2, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
           className="text-4xl sm:text-5xl md:text-8xl font-cinematic font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500 mb-8 tracking-widest leading-tight text-glow"
         >
           BCA.1080P
@@ -58,7 +58,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed"
         >
           Three years, countless memories, one unforgettable journey. 
@@ -70,7 +70,7 @@ const Hero = () => {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3, duration: 1 }}
+        transition={{ delay: 0.7, duration: 0.6 }}
         className="absolute bottom-12 z-20 flex flex-col items-center"
       >
         <p className="text-white/50 text-xs tracking-[0.2em] mb-4 uppercase">Scroll to explore</p>

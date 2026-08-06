@@ -24,7 +24,7 @@ const ImageLoader = ({
         alt={alt}
         loading="lazy"
         onLoad={() => setIsLoaded(true)}
-        className={`${imgClassName} ${className} transition-all duration-700 ease-out ${
+        className={`${imgClassName} ${className} transition-all duration-250 ease-out ${
           isLoaded ? 'opacity-100 scale-100 blur-0' : 'opacity-0 scale-95 blur-sm'
         }`}
         {...props}

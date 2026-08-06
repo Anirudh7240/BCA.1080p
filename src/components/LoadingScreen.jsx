@@ -9,12 +9,12 @@ const LoadingScreen = ({ onComplete }) => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
-          setTimeout(onComplete, 800); // slight delay after reaching 100
+          setTimeout(onComplete, 200); // slight delay after reaching 100
           return 100;
         }
-        return prev + 2; // speed of loading
+        return prev + 5; // speed of loading
       });
-    }, 40);
+    }, 20);
 
     return () => clearInterval(timer);
   }, [onComplete]);
@@ -23,14 +23,14 @@ const LoadingScreen = ({ onComplete }) => {
     <AnimatePresence>
       <motion.div
         className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black"
-        exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
+        exit={{ opacity: 0, scale: 1.05, filter: "blur(4px)" }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         <motion.h1 
           className="text-2xl sm:text-4xl md:text-6xl font-cinematic text-white text-glow mb-8 tracking-widest text-center px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
         >
           A CINEMATIC JOURNEY
         </motion.h1>
