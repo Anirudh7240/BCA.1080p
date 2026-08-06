@@ -30,7 +30,7 @@ const Gallery = () => {
           <div className="w-24 h-1 bg-white/20 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+        <div className="columns-2 sm:columns-3 gap-2 sm:gap-4 space-y-2 sm:space-y-4">
           {images.map((img) => (
             <motion.div
               key={img.id}
@@ -40,7 +40,7 @@ const Gallery = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 0.98 }}
-              className={`relative group cursor-pointer overflow-hidden rounded-xl glass break-inside-avoid mb-4`}
+              className={`relative group cursor-pointer overflow-hidden rounded-xl glass break-inside-avoid mb-2 sm:mb-4`}
             >
               <ImageLoader src={img.src} alt="Memory" className="w-full h-auto object-cover transition-all duration-700 block group-hover:scale-102" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">

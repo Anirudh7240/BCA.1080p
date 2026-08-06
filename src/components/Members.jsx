@@ -77,7 +77,7 @@ const Members = () => {
           <p className="text-white/50 max-w-2xl mx-auto">The people who made these three years unforgettable.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-8">
           {members.map((member, index) => (
             <motion.div
               key={member.id}
@@ -87,9 +87,9 @@ const Members = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               onClick={() => setSelectedMember(member)}
-              className="glass rounded-xl p-6 text-center group hover:border-white/30 transition-all duration-300 cursor-pointer"
+              className="glass rounded-xl p-4 sm:p-6 text-center group hover:border-white/30 transition-all duration-300 cursor-pointer"
             >
-              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full p-1 border border-white/20 group-hover:border-white/50 transition-colors bg-white overflow-hidden">
+              <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 rounded-full p-1 border border-white/20 group-hover:border-white/50 transition-colors bg-white overflow-hidden">
                 <ImageLoader 
                   src={member.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')} 
                   alt={member.name} 
@@ -100,8 +100,8 @@ const Members = () => {
                   <ZoomIn className="text-white" size={20} />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-white tracking-wide mb-1">{member.name}</h3>
-              <p className="text-sm text-white/50 uppercase tracking-widest">{member.role}</p>
+              <h3 className="text-sm sm:text-base lg:text-xl font-bold text-white tracking-wide mb-1 truncate" title={member.name}>{member.name}</h3>
+              <p className="text-[10px] sm:text-xs lg:text-sm text-white/50 uppercase tracking-widest">{member.role}</p>
             </motion.div>
           ))}
         </div>
