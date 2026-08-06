@@ -64,7 +64,7 @@ const Gallery = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white font-sans tracking-widest uppercase text-sm transition-all duration-300 hover:scale-105 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
           >
-            <img src="/vecteezy_google-drive-icons_17395378.png" alt="Google Drive" className="w-6 h-6 object-contain" />
+            <img src="/vecteezy_google-drive-icons_17395378.webp" alt="Google Drive" className="w-6 h-6 object-contain" />
             View More on Google Drive
           </a>
         </motion.div>

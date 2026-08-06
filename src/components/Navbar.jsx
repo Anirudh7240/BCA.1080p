@@ -44,7 +44,7 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
             rel="noopener noreferrer"
             className="flex items-center text-white/80 hover:text-white transition-all text-sm tracking-widest"
           >
-            <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
+            <img src="/instagram.webp" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
             <span>@bca.1080p</span>
           </a>
           <a 
@@ -53,7 +53,7 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
             rel="noopener noreferrer"
             className="flex items-center text-white/80 hover:text-white transition-all text-sm tracking-widest"
           >
-            <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
+            <img src="/instagram.webp" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
             <span>@kann.bca</span>
           </a>
         </div>
@@ -156,7 +156,7 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center text-white/80 hover:text-white transition-colors justify-center text-sm tracking-widest"
             >
-              <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
+              <img src="/instagram.webp" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
               <span>@bca.1080p</span>
             </a>
             <a 
@@ -166,7 +166,7 @@ const Navbar = ({ toggleMusic, isMusicPlaying, nextSong, prevSong, currentSong }
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center text-white/80 hover:text-white transition-colors justify-center text-sm tracking-widest"
             >
-              <img src="/instagram.png" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
+              <img src="/instagram.webp" alt="Insta" className="w-5 h-5 mr-2 object-contain" />
               <span>@kann.bca</span>
             </a>
           </div>
