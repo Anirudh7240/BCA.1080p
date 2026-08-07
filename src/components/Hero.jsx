@@ -34,6 +34,10 @@ const Hero = () => {
             alt="Batch Memory" 
             className="w-full h-full object-cover opacity-80"
             wrapperClassName="w-full h-full"
+            zoomEnabled={true}
+            zoomOnClick={false}
+            zoomOnHover={true}
+            zoomScale={1.1}
           />
         </div>
       </motion.div>
@@ -122,10 +126,15 @@ const Hero = () => {
               </button>
               
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 max-h-[80vh] w-full flex justify-center bg-black/50">
-                <img 
+                <ImageLoader 
                   src="/LANDING-PAGE.webp" 
                   alt="Batch Memory Full" 
                   className="w-full h-full object-contain max-h-[80vh] block" 
+                  wrapperClassName="w-full h-full flex justify-center"
+                  zoomEnabled={true}
+                  zoomOnClick={true}
+                  zoomOnHover={true}
+                  zoomScale={2.5}
                 />
               </div>
             </motion.div>
